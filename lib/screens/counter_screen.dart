@@ -8,14 +8,12 @@ class CounterScreen extends StatefulWidget {
 }
 
 class _CounterScreenState extends State<CounterScreen> {
-
-   int counter = 0;
-
+  int counter = 0;
 
   @override
   Widget build(BuildContext context) {
     const fontSize30 = TextStyle(fontSize: 30);
-   
+
     return Scaffold(
         appBar: AppBar(
           title: const Text('counter Screen'),
@@ -34,14 +32,35 @@ class _CounterScreenState extends State<CounterScreen> {
             ],
           ),
         ),
-        //floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterFloat,
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            counter++;
-            setState(() {});
-          },
-          backgroundColor: Colors.indigo,
-          child: const Icon(Icons.add),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        floatingActionButton: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            FloatingActionButton(
+              onPressed: () {
+                counter--;
+                setState(() {});
+              },
+              backgroundColor: Colors.indigo,
+              child: const Icon(Icons.minimize),
+            ),
+            FloatingActionButton(
+              onPressed: () {
+                counter = 0;
+                setState(() {});
+              },
+              backgroundColor: Colors.indigo,
+              child: const Icon(Icons.replay_outlined),
+            ),
+            FloatingActionButton(
+              onPressed: () {
+                counter++;
+                setState(() {});
+              },
+              backgroundColor: Colors.indigo,
+              child: const Icon(Icons.add),
+            ),
+          ],
         ));
   }
 }
