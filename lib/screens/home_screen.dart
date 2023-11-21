@@ -5,7 +5,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const fontSize30 = const TextStyle(fontSize: 30);
+    const fontSize30 = TextStyle(fontSize: 30);
     int counter = 10;
     return Scaffold(
         appBar: AppBar(
@@ -32,6 +32,7 @@ class HomeScreen extends StatelessWidget {
           },
           backgroundColor: Colors.indigo,
           child: const Icon(Icons.add),
-        ));
+        )
+      );
   }
 }

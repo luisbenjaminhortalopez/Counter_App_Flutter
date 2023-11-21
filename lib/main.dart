@@ -3,11 +3,11 @@ import 'package:my_first_flutter_app/screens/counter_screen.dart';
 //import 'package:my_first_flutter_app/screens/home_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const CaraDeCulo());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class CaraDeCulo extends StatelessWidget {
+  const CaraDeCulo({super.key});
 
   @override
   Widget build(BuildContext context) {
